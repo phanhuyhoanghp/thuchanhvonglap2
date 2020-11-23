@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3: In tam giac vuong</title>
+</head>
+<body>
+<script>
+    displayTriangle1(5);
+    document.write("<br>");
+    displayTriangle2(5);
+    document.write("<br>");
+    displayTriangle3(5);
+    document.write("<br>");
+    displayTriangle4 (5);
+    function displayTriangle1 (size){
+        for (let i=0;i<size;i++){
+            for (let j=0;j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    }
+
+    function displayTriangle2 (size){
+        debugger
+        for (let i=0;i<size;i++){
+            for (let j=size-1;j>=i;j--){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    }
+
+    function displayTriangle3 (size){
+        for (let i=0;i<size;i++){
+            /*in khoang trang*/
+            for(j=size-2;j>=i;j--){
+                document.write("&nbsp","&nbsp")
+            }
+            for (let j=size-1;j>=size-i-1;j--){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+    function displayTriangle4 (size){
+        for (let i=0;i<size;i++){
+            for (j=0;j<i;j++){
+                document.write("&nbsp","&nbsp")
+            }
+            for (let j=size-1;j>=i;j--){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    }
+</script>
+</body>
+</html>
